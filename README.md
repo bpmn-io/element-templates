@@ -6,6 +6,8 @@ The tool that powers declarative, domain specific modeling at [bpmn.io](https://
 
 Element templates allow you to define re-usable, domain specific building blocks to [supported bpmn.io toolkits](#supported-toolkits). Through [a set of utilities](#related-utilities) they get deeply integrated into the core modeling experience.
 
+![Element Templates application demo](./docs/screenshot.png)
+
 
 ## Features
 
