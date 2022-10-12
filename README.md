@@ -11,7 +11,9 @@ Element templates allow you to define re-usable, domain specific building blocks
 
 ## Features
 
-Through a [JSON document](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/) you define different aspects of a re-usable building block:
+Through a [JSON document](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/) you define different aspects of a re-usable building block.
+
+### [General Configuration](./docs/DEFINITION.md#general)
 
 * Name and description
 * Icon
@@ -20,10 +22,55 @@ Through a [JSON document](https://docs.camunda.io/docs/next/components/modeler/d
 * Documentation references
 * Versioning + deprecation information
 
+### [Property Configuration](./docs/DEFINITION.md#properties)
+
+* Type of control
+* Technical binding
+* Labels, description
+* Validation
+* Grouping
+* Conditional activation criteria
+
+
+## Editor Integration
+
+Through a [set of utilities](#related-utilities) element templates get deeply integrated into our editor tooling.
+
+### Create/Append Anything
+
+> Provided [through an extension](https://github.com/bpmn-io/bpmn-js-connectors-extension).
+
+* Palette and context pads have a `...` entry to create / append any element
+* Building blocks can be discovered via search
+* Replace menu is enhanced to work using the same pattern
+
+### Configuration
+
+> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel).
+
+* Properties panel displays [configuration properties](./docs/PROPERTIES.md#readme)
+* Validates inputs according to defined validation rules
+* Shows basic template meta-data
+* Allows applying, [unlinking and removing](./docs/UNLINK_REMOVE.md#readme) of a template
+
+### Upgrading
+
+> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) as well as [an extension](https://github.com/bpmn-io/bpmn-js-connectors-extension).
+
+Templates come with two built-in ways of migration: _Upgrading_ to a newer (compatible) version or _deprecation_ (with the ability to display a custom message).
+
+* Upgrading works alongside the built-in [versioning feature](./docs/VERSIONING.md#readme)
+* Migration happens using the built-in [replace feature](./docs/REPLACE.md#readme)
+* Upgrade and replace will [preserve defined properties](./docs/REPLACE.md#upgrade-behavior) on a best effort basis (only keeping what is valid in the new template)
 
 ## Supported Toolkits
 
 Right now element templates are supported in [bpmn-js](https://github.com/bpmn-io/bpmn-js).
+
+
+## Creating an Element Template Provider
+
+Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.md).
 
 
 ## Related Utilities
