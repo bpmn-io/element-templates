@@ -11,7 +11,7 @@ Element templates allow you to define re-usable, domain specific building blocks
 
 ## Features
 
-Through a [JSON document](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/) you define different aspects of a re-usable building block.
+Through a [JSON document](./docs/DEFINITION.md#readme) you define different aspects of a re-usable building block.
 
 ### [General Configuration](./docs/DEFINITION.md#general)
 
@@ -48,10 +48,10 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 > Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel).
 
-* Properties panel displays [configuration properties](./docs/PROPERTIES.md#readme)
+* Properties panel displays [configuration properties](./docs/PROPERTIES_EDITING.md#readme)
 * Validates inputs according to defined validation rules
 * Shows basic template meta-data
-* Allows applying, [unlinking and removing](./docs/UNLINK_REMOVE.md#readme) of a template
+* Allows [applying, unlinking and removing](./docs/APPLICATION.md#readme) of a template
 
 ### Upgrading
 
@@ -60,8 +60,8 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 Templates come with two built-in ways of migration: _Upgrading_ to a newer (compatible) version or _deprecation_ (with the ability to display a custom message).
 
 * Upgrading works alongside the built-in [versioning feature](./docs/VERSIONING.md#readme)
-* Migration happens using the built-in [replace feature](./docs/REPLACE.md#readme)
-* Upgrade and replace will [preserve defined properties](./docs/REPLACE.md#upgrade-behavior) on a best effort basis (only keeping what is valid in the new template)
+* Migration happens using the built-in [replace feature](./docs/APPLICATION.md#replace)
+* Upgrade and replace will [preserve defined properties](./docs/APPLICATION.md#upgrade-behavior) on a best effort basis (only keeping what is valid in the new template)
 
 ## Supported Toolkits
 
@@ -70,10 +70,10 @@ Right now element templates are supported in [bpmn-js](https://github.com/bpmn-i
 
 ## Creating an Element Template Provider
 
-Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.md).
+Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.md#readme).
 
 
-## Related Utilities
+## Related
 
 * [bpmn-js-properties-panel](https://github.com/bpmn-io/bpmn-js-properties-panel) - Provides the `ElementTemplate` core and ships with two implementation for technical property binding of [Camunda](https://camunda.com/) properties.
 * [element-templates-icons-renderer](https://github.com/bpmn-io/element-templates-icons-renderer) - Renders embedded element template icons on the modeling canvas.
