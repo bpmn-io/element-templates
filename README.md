@@ -109,7 +109,7 @@ Right now element templates are supported in [bpmn-js](https://github.com/bpmn-i
 Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.md#readme).
 
 
-## Related
+## Related Utilities
 
 * [bpmn-js-properties-panel](https://github.com/bpmn-io/bpmn-js-properties-panel) - Provides the `ElementTemplate` core and ships with two implementation for technical property binding of [Camunda](https://camunda.com/) properties.
 * [element-templates-icons-renderer](https://github.com/bpmn-io/element-templates-icons-renderer) - Renders embedded element template icons on the modeling canvas.
