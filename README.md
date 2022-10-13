@@ -63,6 +63,42 @@ Templates come with two built-in ways of migration: _Upgrading_ to a newer (comp
 * Migration happens using the built-in [replace feature](./docs/APPLICATION.md#replace)
 * Upgrade and replace will [preserve defined properties](./docs/APPLICATION.md#upgrade-behavior) on a best effort basis (only keeping what is valid in the new template)
 
+
+## Basic Setup
+
+The basic setup requires a BPMN modeler as well as properties panel and element template provider modules:
+
+```javascript
+import BpmnModeler from 'bpmn-js/lib/Modeler';
+
+import {
+  BpmnPropertiesPanelModule,
+  BpmnPropertiesProviderModule,
+  ZeebePropertiesProviderModule,
+  CloudElementTemplatesPropertiesProviderModule
+} from 'bpmn-js-properties-panel';
+```
+
+It allows you to pass element templates to the modeler during instantiation via the `elementTemplate` configuration:
+
+```javascript
+const elementTemplates = [ ... ];
+
+const modeler = new BpmnModeler({
+  container: '#canvas',
+  additionalModules: [
+    BpmnPropertiesPanelModule,
+    BpmnPropertiesProviderModule,
+    ZeebePropertiesProviderModule,
+    CloudElementTemplatesPropertiesProviderModule
+  ],
+  elementTemplates
+});
+```
+
+Checkout [API](./docs/API.md) for advanced use-cases driven via additional APIs.
+
+
 ## Supported Toolkits
 
 Right now element templates are supported in [bpmn-js](https://github.com/bpmn-io/bpmn-js).
