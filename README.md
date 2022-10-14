@@ -61,7 +61,7 @@ Templates come with two built-in ways of migration: _Upgrading_ to a newer (comp
 
 * Upgrading works alongside the built-in [versioning feature](./docs/VERSIONING.md#readme)
 * Migration happens using the built-in [replace feature](./docs/APPLICATION.md#replace)
-* Upgrade and replace will [preserve defined properties](./docs/APPLICATION.md#upgrade-behavior) on a best effort basis (only keeping what is valid in the new template)
+* Upgrade and replace will [preserve defined properties](./docs/APPLICATION.md#upgrade-behavior) on a best effort basis
 
 
 ## Basic Setup
