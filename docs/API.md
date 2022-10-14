@@ -34,7 +34,7 @@ Apply a template to an element (potentially replacing the element, applying prop
 
 ### `ElementTemplates#getLatest(element|templateId): Template[]`
 
-Get element templates applicable to `element` or matching template with `templateId`
+Get element templates applicable to `element` or matching template with `templateId`.
 
 ### `ElementTemplates#getLatest(): Template[]`
 
