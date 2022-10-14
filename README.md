@@ -1,3 +1,5 @@
+> Want to try out modeling in domain-specific, reusable building blocks? Check out [our demo](https://bpmn-io.github.io/bpmn-js-connectors-extension/?aa=1).
+
 # Element Templates
 
 The tool that powers declarative, domain specific modeling at [bpmn.io](https://bpmn.io/).
