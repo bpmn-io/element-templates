@@ -114,7 +114,7 @@ Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.m
 ## Related Utilities
 
 * [bpmn-js-properties-panel](https://github.com/bpmn-io/bpmn-js-properties-panel) - Provides the `ElementTemplate` core and ships with two implementation for technical property binding of [Camunda](https://camunda.com/) properties.
-* [element-templates-icons-renderer](https://github.com/bpmn-io/element-templates-icons-renderer) - Renders embedded element template icons on the modeling canvas.
+* [element-template-icon-renderer](https://github.com/bpmn-io/element-templates-icons-renderer) - Renders embedded element template icons on the modeling canvas.
 * [element-template-chooser](https://github.com/bpmn-io/element-template-chooser) - A simple element template chooser that plugs into the properties panel
 * [element-template-json-schema](https://github.com/camunda/element-templates-json-schema) - The schema definition for template descriptors
 * [bpmn-js-connectors-extension](https://github.com/bpmn-io/bpmn-js-connectors-extension) - A deep integration into the core modeling experience, featuring create + append anything and replacing with template tasks
