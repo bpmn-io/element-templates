@@ -40,7 +40,7 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 ### Create/Append Anything
 
-> Provided [through an extension](https://github.com/bpmn-io/bpmn-js-connectors-extension).
+> Provided [through an extension](https://github.com/bpmn-io/bpmn-js-create-append-anything).
 
 * Palette and context pads have a `...` entry to create / append any element
 * Building blocks can be discovered via search
@@ -57,7 +57,7 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 ### Upgrading
 
-> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) as well as [an extension](https://github.com/bpmn-io/bpmn-js-connectors-extension).
+> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) as well as [an extension](https://github.com/bpmn-io/bpmn-js-create-append-anything).
 
 Templates come with two built-in ways of migration: _Upgrading_ to a newer (compatible) version or _deprecation_ (with the ability to display a custom message).
 
@@ -117,4 +117,4 @@ Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.m
 * [element-template-icon-renderer](https://github.com/bpmn-io/element-templates-icons-renderer) - Renders embedded element template icons on the modeling canvas.
 * [element-template-chooser](https://github.com/bpmn-io/element-template-chooser) - A simple element template chooser that plugs into the properties panel
 * [element-template-json-schema](https://github.com/camunda/element-templates-json-schema) - The schema definition for template descriptors
-* [bpmn-js-connectors-extension](https://github.com/bpmn-io/bpmn-js-connectors-extension) - A deep integration into the core modeling experience, featuring create + append anything and replacing with template tasks
+* [bpmn-js-create-append-anything](https://github.com/bpmn-io/bpmn-js-create-append-anything) - A deep integration into the core modeling experience, featuring create + append anything and replacing with template tasks
