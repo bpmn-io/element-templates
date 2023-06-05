@@ -1,6 +1,6 @@
 # API
 
-The core element template functionality is exposed through the [`ElementTemplates`](https://github.com/bpmn-io/bpmn-js-properties-panel/blob/master/src/provider/cloud-element-templates/ElementTemplates.js) and [`ElementTemplatesLoader`](https://github.com/bpmn-io/bpmn-js-properties-panel/blob/master/src/provider/cloud-element-templates/ElementTemplatesLoader.js) services. The following documents the most important APIs.
+The core element template functionality is exposed through the [`ElementTemplates`](https://github.com/bpmn-io/bpmn-js-properties-panel/blob/master/src/provider/cloud-element-templates/ElementTemplates.js) and [`ElementTemplatesLoader`](https://github.com/bpmn-io/bpmn-js-properties-panel/blob/master/src/provider/cloud-element-templates/ElementTemplatesLoader.js) services. The following documents the most important APIs. If you implement your custom `elementTemplates` provider then you must implement this interface.
 
 ### `ElementTemplatesLoader#setTemplates(templates)`
 
