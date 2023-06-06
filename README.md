@@ -55,7 +55,7 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 * Validates inputs according to defined validation rules
 * Shows basic template meta-data
 
-### Upgrading
+### Upgrading/Migration/Replacement
 
 > Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) as well as [an extension](https://github.com/bpmn-io/bpmn-js-create-append-anything).
 
@@ -65,6 +65,10 @@ Templates come with two built-in ways of migration: _Upgrading_ to a newer (comp
 * Migration happens using the built-in [replace feature](./docs/APPLICATION.md#replace)
 * Upgrade and replace will [preserve defined properties](./docs/APPLICATION.md#upgrade-behavior) on a best effort basis
 
+The user can trigger the actual upgrade/migration/replacement operation in two ways:
+
+* In the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel), using provided upgrade controls
+* Through the [extended replace menu](https://github.com/bpmn-io/bpmn-js-create-append-anything) by re-applying the template or switching to a different template
 
 ## Basic Setup
 
