@@ -48,12 +48,12 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 ### Configuration
 
-> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel).
+> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) and a [template chooser component](https://github.com/bpmn-io/element-template-chooser).
 
-* Properties panel displays [configuration properties](./docs/PROPERTIES_EDITING.md#readme)
+* Allows to [set an applicable template](./docs/APPLICATION.md#readme) as well as [unlinking and removing](./docs/APPLICATION.md#readme) it
+* Renders configured [template controls](./docs/PROPERTIES_EDITING.md#readme)
 * Validates inputs according to defined validation rules
 * Shows basic template meta-data
-* Allows [applying, unlinking and removing](./docs/APPLICATION.md#readme) of a template
 
 ### Upgrading
 
