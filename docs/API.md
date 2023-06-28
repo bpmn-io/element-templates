@@ -6,7 +6,7 @@ The core element template functionality is exposed through the [`ElementTemplate
 
 ### `ElementTemplates#get(diagramElement): Template|null`
 
-Get the element template currently applied to a diagram element. Returns `null` if no template is applied or the applied template is not known to the modeler.
+Get the element template currently applied to a diagram element. Returns `null` if no template is applied or if the applied template is not known to the modeler.
 
 ```javascript
 const elementTemplates = bpmnJS.get('elementTemplates')
@@ -16,7 +16,7 @@ const template = elementTemplates.get('My_Task');
 
 ### `ElementTemplates#get(templateId, templateVersion?): Template|null`
 
-Get the element template with the given id and optional version. If no version is provided it defaults to latest. Returns `null` if no template is found matching the search criteria.
+Get the element template with the given id and optional version. If no version is provided it defaults to latest. Returns `null` if no template matches the search criteria.
 
 ```javascript
 const elementTemplates = bpmnJS.get('elementTemplates')
