@@ -10,7 +10,6 @@ Element templates allow you to define re-usable, domain specific building blocks
 
 ![Element Templates application demo](./docs/screenshot.png)
 
-
 ## Features
 
 Through a [JSON document](./docs/DEFINITION.md#readme) you define different aspects of a re-usable building block.
@@ -105,16 +104,13 @@ const modeler = new BpmnModeler({
 
 Checkout [API](./docs/API.md) for advanced use-cases driven via additional APIs.
 
-
 ## Supported Toolkits
 
 Right now element templates are supported in [bpmn-js](https://github.com/bpmn-io/bpmn-js).
 
-
 ## Creating an Element Template Provider
 
 Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.md#readme).
-
 
 ## Related Utilities
 

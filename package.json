@@ -22,5 +22,14 @@
   "devDependencies": {
     "remark-cli": "^11.0.0",
     "remark-preset-bpmn-io": "^0.2.1"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-bpmn-io",
+      [
+        "lint-no-html",
+        false
+      ]
+    ]
   }
 }
