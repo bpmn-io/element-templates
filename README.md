@@ -33,6 +33,9 @@ Through a [JSON document](./docs/DEFINITION.md#readme) you define different aspe
 * Grouping
 * Conditional activation criteria
 
+### [Life-Cycle](./docs/VERSIONING.md)
+
+* Upgrade / replace template
 
 ## Editor Integration
 
