@@ -33,10 +33,6 @@ Through a [JSON document](./docs/DEFINITION.md#readme) you define different aspe
 * Grouping
 * Conditional activation criteria
 
-### [Life-Cycle](./docs/VERSIONING.md)
-
-* Upgrade / replace template
-
 ## Editor Integration
 
 Through a [set of utilities](#related-utilities) element templates get deeply integrated into our editor tooling.
@@ -64,14 +60,16 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 Templates come with two built-in ways of migration: _Upgrading_ to a newer (compatible) version or _deprecation_ (with the ability to display a custom message).
 
-* Upgrading works alongside the built-in [versioning feature](./docs/VERSIONING.md#readme)
-* Migration happens using the built-in [replace feature](./docs/APPLICATION.md#replace)
-* Upgrade and replace will [preserve defined properties](./docs/APPLICATION.md#upgrade-behavior) on a best effort basis
+* Upgrading works alongside the built-in [versioning feature](./docs/LIFE_CYCLE.md#versioning)
+* Migration happens using the built-in [replace feature](./docs/LIFE_CYCLE.md#migrate-to-a-different-template)
+* Upgrade and replace will [preserve defined properties](./docs/LIFE_CYCLE.md#upgrade-behavior) on a best effort basis
 
 The user can trigger the actual upgrade/migration/replacement operation in two ways:
 
 * In the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel), using provided upgrade controls
 * Through the [extended replace menu](https://github.com/bpmn-io/bpmn-js-create-append-anything) by re-applying the template or switching to a different template
+
+To learn more about element template evolution checkout the [life-cycle documentation](./docs/LIFE_CYCLE.md).
 
 ## Basic Setup
 

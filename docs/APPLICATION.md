@@ -19,8 +19,3 @@ _To be done._
 ## Replace
 
 _To be done._
-
-
-## Upgrade Behavior
-
-_To be done._
