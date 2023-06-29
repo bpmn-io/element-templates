@@ -1,0 +1,26 @@
+{
+  "name": "element-templates",
+  "version": "0.0.0",
+  "description": "Element template documentation",
+  "scripts": {
+    "all": "npm run format",
+    "format": "npm run format:markdown",
+    "format:markdown": "remark . -qo",
+    "test": "echo \"no tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpmn-io/element-templates.git"
+  },
+  "keywords": [
+    "element",
+    "templates",
+    "bpmn.io"
+  ],
+  "author": "Nico Rehwaldt <https://github.com/nikku>",
+  "license": "MIT",
+  "devDependencies": {
+    "remark-cli": "^11.0.0",
+    "remark-preset-bpmn-io": "^0.2.1"
+  }
+}
