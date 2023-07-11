@@ -16,7 +16,7 @@ Element templates offers two built-in ways of forward migration: Through [versio
 
 ### Upgrading to a new Version
 
-Upgrading to a new template version implies that a [new version is known](#versioning) and that both template versions [are available](#unavailability).
+Upgrading to a new template version implies that for a given template, identified through its `id`, a [new version exists](#versioning). Both templates are [known to the modeling tooling](#unavailability).
 
 If a new template version is available then the properties panel UI will you the ability to upgrade to the new version.
 
@@ -55,7 +55,7 @@ Marking your template as deprecated works by attaching a `deprecated` property t
 
 In order for the modeling stack to work with templates these _must be available_. This applies both for using templates (applying them, showing custom properties) but also for upgrading from or to a certain template.
 
-If templates are unavailable then a descriptive message is shown in the properties panel. The user can unlink to view technical properties _or_ [migrate to a different template](#migrate-to-a-different-template).
+If a template is unavailable (i.e. a template with a given `id` and `version` combination is not known) then a descriptive message is shown in the properties panel. The user can unlink to view technical properties _or_ [migrate to a different template](#migrate-to-a-different-template).
 
 ## Versioning
 
