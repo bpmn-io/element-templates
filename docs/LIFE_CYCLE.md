@@ -12,7 +12,8 @@ The following graphics shows different ways to evolve an element template over t
 
 Element templates offers two built-in ways of forward migration: Through [version upgrades](#upgrading-to-a-new-version) users can forward migrate to a different template version. By [replacing](#migrate-to-a-different-template) a user can switch to an entirely different building block. Both approaches are supported through an [upgrade mechanism](#upgrade-behavior) that preserves user-provided configuration (where applicable) on a best effort basis.
 
-> :information\_source: Upgrading is user-controlled, i.e. there does not exist a [magic automatic upgrading mechanism](https://github.com/bpmn-io/design-principles#no-surprises).
+> [!NOTE]
+> Upgrading is user-controlled, i.e. there does not exist a [magic automatic upgrading mechanism](https://github.com/bpmn-io/design-principles#no-surprises).
 
 ### Upgrading to a new Version
 
@@ -77,7 +78,8 @@ Versioning your templates is as simple as attaching a `version` property to it. 
 }
 ```
 
-> :information\_source: If you ship element templates to your users through files then you'd want to make sure that new versions of a template do not override old versions. A simple way to accomplish this is to organize templates in a single template per file fashion and encode the template version in the file name:
+> [!TIP]
+> If you ship element templates to your users through files then you'd want to make sure that new versions of a template do not override old versions. A simple way to accomplish this is to organize templates in a single template per file fashion and encode the template version in the file name:
 >
 > ```plain
 > └── element-templates
