@@ -58,6 +58,23 @@ In order for the modeling stack to work with templates these _must be available_
 
 If a template is unavailable (i.e. a template with a given `id` and `version` combination is not known) then a descriptive message is shown in the properties panel. The user can unlink to view technical properties _or_ [migrate to a different template](#migrate-to-a-different-template).
 
+### Incompatibility
+
+> [!NOTE]
+> Refer to the [Camunda documentation](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/#template-compatibility) to learn about the template compatibility feature.
+
+A template that is incompatible with the current runtime environment is indicated in the properties panel.
+
+If [linting](https://github.com/bpmn-io/bpmnlint) is available, a warning is displayed specifying which environment the template is incompatible with and whether an update is available.
+
+#### Upgrade to a compatible version
+
+If a template becomes incompatible, it can be updated to a version that is either compatible or does not specify compatibility. The process is the same as [upgrading to a new version](#upgrading-to-a-new-version).
+
+#### No compatible version available
+
+If no compatible version is found, the template behaves similarly to a [deprecated](#deprecation) template.
+
 ## Versioning
 
 Template versioning is an important cornerstone of safe template evolution. If a new version of a template is detected then the user gets the ability to [upgrade](#upgrading-to-a-new-version) to it.
