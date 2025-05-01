@@ -41,7 +41,7 @@ Likely building upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn
   * **Technical bindings**, linking template properties to moddle (diagram element) properties
     * Established when creating a new diagram element from a template
     * Set or updated when a template changes, [preserving compatible properties](./LIFE_CYCLE.md#upgrade-behavior).
-    * Retrieve from the moddle for rendering, and writen to it when changed through the UI
+    * Retrieved from the moddle for rendering, and written back when changed through the UI
 
 ## Case Study: Implementing `zeebe:property`
 
