@@ -1,6 +1,6 @@
 ## Implementation Guide
 
-Through a [high level explainer](#overview), this document lays out technical foundations of the [core element templates](../README.md) mechanism. A [detailed walkthrough](#case-study-implementing-zeebeproperty), shows how to extend element template support.
+This document [lays out technical foundations](#overview) of the [core element templates](../README.md) mechanism. Building on these foundations, a [detailed walkthrough](#case-study-implementing-zeebeproperty), shows how to extend element template support.
 
 ## Overview
 
