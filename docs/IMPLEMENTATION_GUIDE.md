@@ -37,7 +37,7 @@ Typically it builds upon (or re-uses) sustantial parts of [bpmn-js-element-templ
     * To query for applicable templates
     * To apply a template to a given diagram element
     * To create a diagram element from a template
-  * User interface elements that plug into the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) to provide a visual interface for diagram authors
+  * User interface elements that plug into the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) to provide domain-specific rendering and editing capabilities interface for diagram authors
   * Bindings that link the properties to underlying moddle properties
     * Established when creating a new element
     * Set or updated when a template changes, preserving compatible properties
