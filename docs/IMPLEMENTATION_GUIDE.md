@@ -21,8 +21,8 @@ The JSON schema is typically referenced through the `$schema` property in an ele
 
 The schema serves two main purposes:
 
-* It enables editor support (auto-completion and validation) for the element template descriptor
-* It is used by the run-time to validate every templates, ensure they are _safe to use_
+* It **enables editor support** (auto-completion and validation) for the element template descriptor
+* It **validates templates at run-time**, ensuring they are _safe to use_
 
 Elements defined in the schema must be implemented through corresponding [behavior](#behavior).
 
