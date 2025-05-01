@@ -30,16 +30,16 @@ What the schema defines **must** be implemented through corresponding [behavior]
 
 An element template implementation realizes the template behavior. It reads templates provided by the user and brings them to live. It offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications.
 
-Typically it builds upon (or re-uses) sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). Either way, the behavior must provide the following components:
+Typically builds upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates), the behavior must provide the following components:
 
-  * An `elementTemplates` service, [the API](./API.md):
+  * The `elementTemplates` service, [**the API**](./API.md):
     * To validate and set available templates
     * To query for applicable templates
     * To apply a template to a given diagram element
     * To create a diagram element from a template
-  * User interface elements that plug into the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) to provide domain-specific rendering and editing capabilities interface for diagram authors
-  * Bindings that link the properties to underlying moddle properties
-    * Established when creating a new element
+  * **Implementation of UI elements** that allow editing of templated properties as part of the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel)
+  * **Technical bindings** that link template properties to moddle (diagram element) properties
+    * Established when creating a new diagram element from a template
     * Set or updated when a template changes, preserving compatible properties
     * Retrieve from the moddle for rendering, and writen to it when changed through the UI
 
