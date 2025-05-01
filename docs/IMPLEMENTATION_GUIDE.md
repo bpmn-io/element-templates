@@ -28,7 +28,7 @@ What the schema defines **must** be implemented through corresponding [behavior]
 
 ### Behavior
 
-An element template implementation realizes the template behavior. It reads templates provided by the user and brings them to live. It offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications.
+An element template implementation realizes the template behavior. It offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications, and it implements the editing of template properties.
 
 Likely building upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates), the behavior provides the following components:
 
