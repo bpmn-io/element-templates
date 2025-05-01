@@ -40,7 +40,7 @@ Likely building upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn
   * **UI elements**, enabling editing of templated properties as part of the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel)
   * **Technical bindings**, linking template properties to moddle (diagram element) properties
     * Established when creating a new diagram element from a template
-    * Set or updated when a template changes, preserving compatible properties
+    * Set or updated when a template changes, [preserving compatible properties](./LIFE_CYCLE.md#upgrade-behavior).
     * Retrieve from the moddle for rendering, and writen to it when changed through the UI
 
 ## Case Study: Implementing `zeebe:property`
