@@ -8,7 +8,7 @@ On the high level, element templates are supported through a [JSON Schema](#json
 
 ### JSON Schema
 
-The JSON schema ([Camunda example](https://github.com/camunda/element-templates-json-schema)) is typically referenced through the `$schema` property in a JSON document defining an element template:
+The JSON schema is typically referenced through the `$schema` property in a JSON document defining an element template. Take [Camunda 8](https://github.com/camunda/element-templates-json-schema) as an example:
 
 ```json
 {
