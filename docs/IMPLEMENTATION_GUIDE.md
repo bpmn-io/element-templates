@@ -85,7 +85,7 @@ The corresponding element template descriptor could look like this:
 }
 ```
 
-Let's look in detail into how this property is implemented, across [schema](#implementing-zeebeproperty-schema) and [behavior](#implementing-zeebeproperty-behavior).
+Let's look into how this property is implemented, across [schema](#implementing-zeebeproperty-schema) and [behavior](#implementing-zeebeproperty-behavior).
 
 ### Implementing `zeebe:property` Schema
 
