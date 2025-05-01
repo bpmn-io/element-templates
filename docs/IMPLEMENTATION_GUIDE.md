@@ -30,9 +30,13 @@ Elements defined in the schema must be implemented through corresponding [behavi
 
 An element template implementation realizes the template behavior. It reads templates provided by the user, and brings them to live, and offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications. It typically re-uses sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). In a nutshell, an implementing library provides the following components:
 
-  * An `elementTemplates` service, providing the programmatic interface
-  * An implementation of templates, through
-    * Supported UI elements (for properties panel rendering)
+  * An `elementTemplates` service, providing the API:
+    * To validate and set available templates
+    * To query for applicable templates
+    * To apply a template to a given diagram element
+    * To create a diagram element from a template
+  * An implementation of templates properties:
+    * UI elements supported for properties panel rendering
     * Technical bindings
       * To establish when creating a new element
       * To set or update when a template changes, preserving compatible properties
@@ -40,7 +44,7 @@ An element template implementation realizes the template behavior. It reads temp
 
 ## Case Study: Implementing `zeebe:property`
 
-[`zeebe:property`](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/#zeebeproperty) is a binding for Camunda 8 element templates. A element template author user can use it to create a template property bound to the `zeebe:property` BPMN 2.0 XML extension, i.e. for a task:
+[`zeebe:property`](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/#zeebeproperty) is a binding for Camunda 8 element templates. A element template author user can use it to create a template property bound to the `zeebe:property` BPMN 2.0 XML extension, i.e. on a `bpmn:Task`:
 
 ```xml
 <bpmn:definitions>
