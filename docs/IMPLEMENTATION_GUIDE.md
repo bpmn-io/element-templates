@@ -21,26 +21,27 @@ The JSON schema is typically referenced through the `$schema` property in an ele
 
 The schema serves two main purposes:
 
-* It **enables editor support** (auto-completion and validation) for the element template descriptor
+* It **enables editor support** (auto-completion and validation) during template creation
 * It **validates templates at run-time**, ensuring they are _safe to use_
 
-Elements defined in the schema must be implemented through corresponding [behavior](#behavior).
+What the schema defines **must** be implemented through corresponding [behavior](#behavior).
 
 ### Behavior
 
-An element template implementation realizes the template behavior. It reads templates provided by the user, and brings them to live, and offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications. It typically re-uses sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). In a nutshell, an implementing library provides the following components:
+An element template implementation realizes the template behavior. It reads templates provided by the user and brings them to live. It offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications.
 
-  * An `elementTemplates` service, providing the [API](./API.md):
+Typically it builds upon (or re-uses) sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). Either way, the behavior must provide the following components:
+
+  * An `elementTemplates` service, [the API](./API.md):
     * To validate and set available templates
     * To query for applicable templates
     * To apply a template to a given diagram element
     * To create a diagram element from a template
-  * An implementation of templates properties:
-    * UI elements supported for properties panel rendering
-    * Technical bindings
-      * To establish when creating a new element
-      * To set or update when a template changes, preserving compatible properties
-      * To retrieve the corresponding moddle value for rendering, and to write it, when user changes it through the UI
+  * User interface elements that plug into the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) to provide a visual interface for diagram authors
+  * Bindings that link the properties to underlying moddle properties
+    * Established when creating a new element
+    * Set or updated when a template changes, preserving compatible properties
+    * Retrieve from the moddle for rendering, and writen to it when changed through the UI
 
 ## Case Study: Implementing `zeebe:property`
 
