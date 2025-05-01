@@ -30,7 +30,7 @@ What the schema defines **must** be implemented through corresponding [behavior]
 
 An element template implementation realizes the template behavior. It reads templates provided by the user and brings them to live. It offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications.
 
-Typically builds upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates), the behavior must provide the following components:
+Likely building upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates), the behavior provides the following components:
 
   * The [**API**](./API.md), provided throught the `elementTemplates` service:
     * To validate and set available templates
@@ -85,15 +85,15 @@ The corresponding element template descriptor could look like this:
 }
 ```
 
-Let's look in detail into how this property is implemented, across [schema](#json-schema) and [behavior](#behavior).
+Let's look in detail into how this property is implemented, across [schema](#implementing-zeebeproperty-schema) and [behavior](#implementing-zeebeproperty-behavior).
 
-### `zeebe:property` Schema
+### Implementing `zeebe:property` Schema
 
 `zeebe:property` is a valid value of an element templates properties `binding#type` field. Supporting it via JSON schema means to extend the schema appropriately to [allow that value and add test coverage](https://github.com/search?q=repo%3Acamunda%2Felement-templates-json-schema+%22zeebe%3Aproperty%22&type=code).
 
 Additionally, the implementation _may_ extend the JSON schema with custom error handling. While not relevant during template editing, the custom error handling greatly benefits users when validating element templates at run-time. It causes validators to print less technical, hence more human readable error messages.
 
-### `zeebe:property` Behavior
+### Implementing `zeebe:property` Behavior
 
 [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates) implements element templates for Camunda 7 and Camunda 8. Hence, we look to the library to extend the template behavior.
 
