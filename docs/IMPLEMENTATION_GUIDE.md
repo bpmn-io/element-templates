@@ -30,7 +30,7 @@ Elements defined in the schema must be implemented through corresponding [behavi
 
 An element template implementation realizes the template behavior. It reads templates provided by the user, and brings them to live, and offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications. It typically re-uses sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). In a nutshell, an implementing library provides the following components:
 
-  * An `elementTemplates` service, providing the API:
+  * An `elementTemplates` service, providing the [API](./API.md):
     * To validate and set available templates
     * To query for applicable templates
     * To apply a template to a given diagram element
