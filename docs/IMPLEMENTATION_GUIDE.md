@@ -95,7 +95,7 @@ Additionally, the implementation _may_ extend the JSON schema with custom error 
 
 ### `zeebe:property` Behavior
 
-[bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates) implements element templates for Camunda 7 and Camunda 8, hence we look to that library to extend the template behavior.
+[bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates) implements element templates for Camunda 7 and Camunda 8. Hence, we look to the library to extend the template behavior.
 
 What [looks complicated at first](https://github.com/search?q=repo%3Abpmn-io%2Fbpmn-js-element-templates+%22zeebe%3Aproperty%22&type=code) realizes three aspects of the `zeebe:property` binding:
 
