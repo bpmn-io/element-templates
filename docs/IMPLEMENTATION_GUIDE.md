@@ -37,8 +37,8 @@ Typically builds upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpm
     * To query for applicable templates
     * To apply a template to a given diagram element
     * To create a diagram element from a template
-  * **UI elements** that allow editing of templated properties as part of the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel)
-  * **Technical bindings** that link template properties to moddle (diagram element) properties
+  * **UI elements**, enabling editing of templated properties as part of the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel)
+  * **Technical bindings**, linking template properties to moddle (diagram element) properties
     * Established when creating a new diagram element from a template
     * Set or updated when a template changes, preserving compatible properties
     * Retrieve from the moddle for rendering, and writen to it when changed through the UI
