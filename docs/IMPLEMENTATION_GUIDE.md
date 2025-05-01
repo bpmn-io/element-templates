@@ -8,7 +8,7 @@ On the high level, element templates are supported through a [JSON Schema](#json
 
 ### JSON Schema
 
-The JSON schema is typically referenced through the `$schema` property in a JSON document defining an element template. Take [Camunda 8](https://github.com/camunda/element-templates-json-schema) as an example:
+The JSON schema is typically referenced through the `$schema` property in an element template descriptor. Take [Camunda 8](https://github.com/camunda/element-templates-json-schema) as an example:
 
 ```json
 {
@@ -24,7 +24,7 @@ The schema serves two main purposes:
 * When creating an element template, referencing the JSON schema will enable editing support in modern code editors, both for auto-completion, and validation.
 * When using the element template, the run-time will validate every template against the supported schema, to sanitize it, and ensure it is _safe to use_.
 
-Elements defined in the schema must be implemented through corresponding [element template behavior](#behavior).
+Elements defined in the schema must be implemented through corresponding [behavior](#behavior).
 
 ### Behavior
 
