@@ -28,15 +28,15 @@ Elements defined in the schema must be implemented through corresponding [behavi
 
 ### Behavior
 
-An element template implementation realizes the template behavior, reads templates provided by the user, and brings them to live. It typically re-uses sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). In a nutshell, it provides:
+An element template implementation realizes the template behavior. It reads templates provided by the user, and brings them to live, and offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications. It typically re-uses sustantial parts of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates). In a nutshell, an implementing library provides the following components:
 
-  * An `elementTemplates` service, allowing interaction with templates via API
-  * Implementation of templates, through
-    * Supported UI elements
+  * An `elementTemplates` service, providing the programmatic interface
+  * An implementation of templates, through
+    * Supported UI elements (for properties panel rendering)
     * Technical bindings
-      * Creating a new element
-      * Applying an element template (or updating it), preserving compatible properties
-      * Displaying retrieving XML value, updating it when user changes it through the UI
+      * To establish when creating a new element
+      * To set or update when a template changes, preserving compatible properties
+      * To retrieve the corresponding moddle value for rendering, and to write it, when user changes it through the UI
 
 ## Case Study: Implementing `zeebe:property`
 
