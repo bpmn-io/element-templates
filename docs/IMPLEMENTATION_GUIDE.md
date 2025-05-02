@@ -28,20 +28,35 @@ What the schema defines **must** be implemented through corresponding [behavior]
 
 ### Behavior
 
-An element template implementation realizes the template behavior. It offers APIs used by [editor integrations](../README.md#editor-integration) and embedding applications, and it implements the UI that facilitates domain specific rendering and editing of template properties.
+> [!NOTE]
+> Recommended to build on top of [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates).
 
-Likely building upon [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates), the behavior provides the following components:
+An element template implementation realizes the template *behavior*. It can roughtly can be structured in [API](#api), [UI controls](#ui-controls), and [property bindings](#property-bindings).
 
-  * The [**API**](./API.md), provided throught the `elementTemplates` service:
-    * To validate and set available templates
-    * To query for applicable templates
-    * To apply a template to a given diagram element
-    * To create a diagram element from a template
-  * **UI elements**, enabling editing of templated properties as part of the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel)
-  * **Technical bindings**, linking template properties to moddle (diagram element) properties
-    * Established when creating a new diagram element from a template
-    * Set or updated when a template changes, [preserving compatible properties](./LIFE_CYCLE.md#upgrade-behavior).
-    * Retrieved from the moddle for rendering, and written back when changed through the UI
+#### API
+
+The [*API*](./API.md), including the `elementTemplates` service is used by [editor integrations](../README.md#editor-integration) and the embedding applications:
+
+* To validate and set available templates
+* To query for applicable templates
+* To apply a template to a given diagram element
+* To create a diagram element from a template
+
+#### UI Controls
+
+Extending the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel), *UI controls* facilitate the domain specific editing of [template properties](../README.md#property-configuration), including:
+
+* Rendering + editing
+* Hinting
+* Validation
+
+#### Property Bindings
+
+Linking [template properties](../README.md#property-configuration) to the moddle (diagram element) is realized through *property bindings*:
+
+  * Established when creating a new diagram element from a template
+  * Set or updated when a template changes, [preserving compatible properties](./LIFE_CYCLE.md#upgrade-behavior).
+  * Retrieved from the moddle for rendering, and written back when changed through the UI
 
 ## Case Study: Implementing `zeebe:property`
 
