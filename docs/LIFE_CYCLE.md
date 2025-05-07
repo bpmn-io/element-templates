@@ -10,7 +10,11 @@ The following graphics shows different ways to evolve an element template over t
 
 ## Evolution
 
-Element templates offers two built-in ways of forward migration: Through [version upgrades](#upgrading-to-a-new-version) users can forward migrate to a different template version. By [replacing](#migrate-to-a-different-template) a user can switch to an entirely different building block. Both approaches are supported through an [upgrade mechanism](#upgrade-behavior) that preserves user-provided configuration (where applicable) on a best effort basis.
+Element templates offers two built-in ways of forward migration: Through [version upgrades](#upgrading-to-a-new-version) users can forward migrate to a different template version. By [replacing](#migrate-to-a-different-template) a user can switch to an entirely different building block.
+
+[Template compatibility](#indicating-compatibility) guides users to use template versions supported in their environment.
+
+Evolving (upgrading, downgrading or replacement) [preserves user-provided configuration](#upgrade-behavior) on a best effort basis.
 
 > [!NOTE]
 > Upgrading is user-controlled, i.e. there does not exist a [magic automatic upgrading mechanism](https://github.com/bpmn-io/design-principles#no-surprises).
@@ -22,6 +26,16 @@ Upgrading to a new template version implies that for a given template, identifie
 If a new template version is available then the properties panel UI will you the ability to upgrade to the new version.
 
 The built-in [upgrade mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth.
+
+### Indicating compatibility
+
+Similar to [upgrading](#upgrading-to-a-new-version) just so that [compatibility](#compatibility) is determined by matching configured _engines_ with requirements defined by an element template.
+
+If the current template is incompatible in a given environment, and a compatible template is available, then the properties panel UI will suggest you to switch to that compatible version; it may very well be an older one. If no compatible version is available, then this will be indicated and the user must [resolve the issue themselves](#migrate-to-a-different-template).
+
+During upgrading/downgrading the [upgrade mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth.
+
+Similar to [deprecated templates](#deprecation) incompatible templates will not be offered in the modeling UI.
 
 ### Migrate to a Different Template
 
@@ -87,6 +101,36 @@ Versioning your templates is as simple as attaching a `version` property to it. 
 >     ├── my-custom-task-2.json
 >     └── ...
 > ```
+
+## Compatibility
+
+Compatibility matches [environment constraints](#engines-configuration) with [requirements expressed](#engines-property) in an element template.
+
+It allows template authors to express which template shall be used in a particular environment. It  users to choose compatible building blocks, thus preventing surprises during template use and later execution.
+
+#### `engines` property
+
+A template author can express environmental constraints throught he `engines` property:
+
+```json
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "My Custom Task",
+  "id": "my.custom.task",
+  "engines": {
+    "camunda": "^7"
+  },
+  ...
+}
+```
+
+This will be matched with [actual engines configuration](#engines-configuration) to determine compatibility.
+
+#### Engines configuration
+
+Element templates get their environment through [the API](./API.md#elementtemplatessetenginesengines-recordstring-string-void) or via upfront setup via the `elementTemplates.engines` configuration.
+
+Once set (or changed), templates will be [checked against compatibility](#indicating-compatibility).
 
 ## Upgrade Behavior
 

@@ -40,6 +40,19 @@ Get element templates applicable to `element` or matching template with `templat
 
 Get list of element templates available.
 
+### `ElementTemplates#setEngines(engines: Record<string, string>): void`
+
+Sets the engines used to determine [element template compatibility](./LIFE_CYCLE.md#compatibility).
+
+```javascript
+const elementTemplates = bpmnJS.get('elementTemplates')
+
+const template = elementTemplates.setEngines({
+  camunda: '>= 1.25',
+  myEditor: '^50'
+});
+```
+
 ### `ElementTemplatesLoader#setTemplates(templates)`
 
 Validates and sets element templates synchronously. Does not throw on template errors but instead emits them through an `elementTemplates.errors` event.
