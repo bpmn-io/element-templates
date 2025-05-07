@@ -106,7 +106,7 @@ Versioning your templates is as simple as attaching a `version` property to it. 
 
 Compatibility matches [environment constraints](#engines-configuration) with [requirements expressed](#engines-property) in an element template.
 
-It allows template authors to express which template shall be used in a particular environment. It  users to choose compatible building blocks, thus preventing surprises during template use and later execution.
+It allows template authors to express which template shall be used in a particular environment. It allows users to choose compatible building blocks, thus preventing surprises during template use and later execution.
 
 #### `engines` property
 
