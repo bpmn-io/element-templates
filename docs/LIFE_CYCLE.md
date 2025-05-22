@@ -4,7 +4,7 @@ This document outlines the set of utilities that allows you to evolve templates 
 
 ## Overview
 
-The following graphics shows different ways to evolve an element template over time.
+The following graphics shows different ways to [evolve](#evolution) an element template over time.
 
 ![Template evolution](./images/upgrading.png)
 
