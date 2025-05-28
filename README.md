@@ -108,9 +108,9 @@ Checkout [API](./docs/API.md) for advanced use-cases driven via additional APIs.
 
 Right now element templates are supported in [bpmn-js](https://github.com/bpmn-io/bpmn-js).
 
-## Creating an Element Template Provider
+## Implementation Guide
 
-Refer to the [create a provider guide](./docs/CREATE_ELEMENT_TEMPLATE_PROVIDER.md#readme).
+Refer to the [implementation guide](./docs/IMPLEMENTATION_GUIDE.md#readme) to learn how the element templates core is built, and can be extended. 
 
 ## Related Utilities
 
