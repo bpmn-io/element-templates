@@ -117,5 +117,6 @@ What [looks complicated at first](https://github.com/search?q=repo%3Abpmn-io%2Fb
 * A [create helper](https://github.com/search?q=repo%3Abpmn-io%2Fbpmn-js-element-templates+%22zeebe%3Aproperty%22+path%3Asrc%2Fcloud-element-templates%2Fcreate%2FZeebePropertiesProvider.js&type=code) establishes the binding on a newly created moddle element. 
   * :arrow_forward: Executed when [appending or creating](../README.md#createappend-anything) elements defined through an element template.
 * The [`ChangeElementTemplateHandler`](https://github.com/search?q=repo%3Abpmn-io%2Fbpmn-js-element-templates+%22zeebe%3Aproperty%22+path%3Asrc%2Fcloud-element-templates%2Fcmd%2FChangeElementTemplateHandler.js&type=code) sets or updates the binding on a diagram element. The handler implements the [upgrade contract](./LIFE_CYCLE.md#upgrade-behavior).
-  * :arrow_forward: Executed when an element template gets applied, either through the properties panel or through the replace menu. 
+  * :arrow_forward: Executed when an [element template gets applied](../README.md#upgradingmigrationreplacement). 
 * The [`propertyUtil`](https://github.com/search?q=repo%3Abpmn-io%2Fbpmn-js-element-templates+%22zeebe%3Aproperty%22+path%3Asrc%2Fcloud-element-templates%2Futil%2FpropertyUtil.js&type=code) reads the value from the moddle and writes it back once changed through the properties panel.
+  * :arrow_forward: Executed when updating an element template defined property via the properties panel.
