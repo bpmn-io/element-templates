@@ -1,6 +1,6 @@
 # Definition
 
-Checkout the [Camunda documentation](https://docs.camunda.io/docs/next/components/modeler/desktop-modeler/element-templates/defining-templates/) to learn how to define an element template.
+Checkout the [Camunda documentation](https://docs.camunda.io/docs/next/components/modeler/element-templates/defining-templates/) to learn how to define an element template.
 
 ## General
 
