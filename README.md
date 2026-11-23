@@ -57,11 +57,11 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 > Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) as well as [an extension](https://github.com/bpmn-io/bpmn-js-create-append-anything).
 
-Templates come with two built-in ways of migration: _Upgrading_ to a newer (compatible) version or _deprecation_ (with the ability to display a custom message).
+Templates support two built-in ways of evolution: _Upgrading_ to a newer (compatible) version and _migration_ to or _replacement_ with a different element template.
 
-* Upgrading works alongside the built-in [versioning feature](./docs/LIFE_CYCLE.md#versioning)
-* Migration happens using the built-in [replace feature](./docs/LIFE_CYCLE.md#migrate-to-a-different-template)
-* Upgrade and replace will [preserve defined properties](./docs/LIFE_CYCLE.md#upgrade-behavior) on a best effort basis
+* [Upgrading](./docs/LIFE_CYCLE.md#upgrading-to-a-new-version) assumes templates are fully compatible
+* [Migration/replacement](./docs/LIFE_CYCLE.md#migrate-to-a-different-template) should be used to support breaking changes
+* Both [preserve defined properties](./docs/LIFE_CYCLE.md#upgrade-behavior) on a best effort basis
 
 The user can trigger the actual upgrade/migration/replacement operation in two ways:
 
