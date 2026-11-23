@@ -27,6 +27,9 @@ If a new template version is available then the properties panel UI will you the
 
 The built-in [upgrade mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth.
 
+> [!NOTE]
+> Upgrading is meant to keep the user's intent and the template's technical contract. It is the responsibility of template authors to ensure that. Offer [migration to a different template](#migrate-to-a-different-template) to support breaking changes.
+
 ### Indicating compatibility
 
 Similar to [upgrading](#upgrading-to-a-new-version) just so that [compatibility](#compatibility) is determined by matching configured _engines_ with requirements defined by an element template.
@@ -43,7 +46,10 @@ Any time the user may choose to migrate to a different element template or, in o
 
 The built-in [replace mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth.
 
-Migration is usually what you'd recommend your users as you [deprecate a template](#deprecation).
+Migration/replacement is what you would typically recommend your users as you [deprecate a template](#deprecation).
+
+> [!NOTE]
+> Unlike [upgrading](#upgrading-to-a-new-version), migration/replacement may change the technical contract and drop user input.
 
 ### Deprecation
 
@@ -134,7 +140,7 @@ Once set (or changed), templates will be [checked against compatibility](#indica
 
 ## Upgrade Behavior
 
-Upgrading, either through [replace](#migrate-to-a-different-template) or [update](#upgrading-to-a-new-version) preserves existing user-provided data on a best effort basis.
+Changing an element's template, either through [replace](#migrate-to-a-different-template) or [upgrade](#upgrading-to-a-new-version), preserves existing user-provided data on a best effort basis.
 
 Matching properties for both templates are identified through their _technical binding_.
 
