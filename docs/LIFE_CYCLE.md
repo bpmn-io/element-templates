@@ -25,7 +25,7 @@ Upgrading to a new template version implies that for a given template, identifie
 
 If a new template version is available then the properties panel UI will you the ability to upgrade to the new version.
 
-The built-in [upgrade mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth.
+The built-in [upgrade mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth. [Update paths](#update-paths) make certain changes non-breaking, such as renaming a binding.
 
 > [!NOTE]
 > Upgrading is meant to keep the user's intent and the template's technical contract. It is the responsibility of template authors to ensure that. Offer [migration to a different template](#migrate-to-a-different-template) to support breaking changes.
@@ -47,6 +47,8 @@ Any time the user may choose to migrate to a different element template or, in o
 The built-in [replace mechanism](#upgrade-behavior) ensures that compatible properties (identified by `binding`) are kept, new defaults are accounted for and so forth.
 
 Migration/replacement is what you would typically recommend your users as you [deprecate a template](#deprecation).
+
+A template may declare a [migration path](#update-paths) from another template. The modeling UI then offers to migrate elements that use the other template, moving user input as declared, instead of upgrades of the other template.
 
 > [!NOTE]
 > Unlike [upgrading](#upgrading-to-a-new-version), migration/replacement may change the technical contract and drop user input.
@@ -145,6 +147,43 @@ Changing an element's template, either through [replace](#migrate-to-a-different
 Matching properties for both templates are identified through their _technical binding_.
 
 Properties that contain user changes are kept, new defaults are applied, and properties that do not exist in the new template are discarted.
+
+## Update Paths
+
+Update paths guide elements to the latest version of a template, as they [upgrade](#upgrading-to-a-new-version) to it, or [migrate](#migrate-to-a-different-template) to it from a different template. A path describes what changed and, with optional hints, moves user input to its new binding. That can make certain changes non-breaking.
+
+#### `updatePaths` property
+
+A template declares update paths from previous versions of itself, and migration paths from other templates, through the `updatePaths` property:
+
+```json
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "My Other Custom Task",
+  "id": "my.other.custom.task",
+  "version": 2,
+  "updatePaths": [
+    {
+      "templateId": "my.custom.task",
+      "hints": [
+        { "from": { "type": "zeebe:input", "name": "url" }, "to": { "type": "zeebe:input", "name": "endpoint" } }
+      ]
+    },
+    {
+      "beforeVersion": 2,
+      "hints": [
+        { "from": { "type": "zeebe:input", "name": "timeout" }, "to": { "type": "zeebe:input", "name": "requestTimeout" } }
+      ]
+    }
+  ],
+  ...
+}
+```
+
+`updatePaths` is a log, oldest first, and new versions append to it. An update path applies to elements on versions below its `beforeVersion`. A migration path applies to elements using the `templateId` template, followed by the update paths declared after it.
+
+> [!NOTE]
+> The latest version of a template carries all of its update paths. Keep it [available](#unavailability), even if deprecated or incompatible.
 
 ---
 
