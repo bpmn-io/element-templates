@@ -55,17 +55,18 @@ Through a [set of utilities](#related-utilities) element templates get deeply in
 
 ### Upgrading/Migration/Replacement
 
-> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel) as well as [an extension](https://github.com/bpmn-io/bpmn-js-create-append-anything).
+> Provided [through the properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel), a [template changelog component](https://github.com/bpmn-io/element-template-changelog) as well as [an extension](https://github.com/bpmn-io/bpmn-js-create-append-anything).
 
 Templates support two built-in ways of evolution: _Upgrading_ to a newer (compatible) version and _migration_ to or _replacement_ with a different element template.
 
 * [Upgrading](./docs/LIFE_CYCLE.md#upgrading-to-a-new-version) assumes templates are fully compatible
 * [Migration/replacement](./docs/LIFE_CYCLE.md#migrate-to-a-different-template) should be used to support breaking changes
 * Both [preserve defined properties](./docs/LIFE_CYCLE.md#upgrade-behavior) on a best effort basis
+* [Update paths](./docs/LIFE_CYCLE.md#update-paths) make certain upgrades non-breaking, and preserve user input across migrations
 
 The user can trigger the actual upgrade/migration/replacement operation in two ways:
 
-* In the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel), using provided upgrade controls
+* In the [properties panel](https://github.com/bpmn-io/bpmn-js-properties-panel), using provided upgrade and migration controls
 * Through the [extended replace menu](https://github.com/bpmn-io/bpmn-js-create-append-anything) by re-applying the template or switching to a different template
 
 To learn more about element template evolution checkout the [life-cycle documentation](./docs/LIFE_CYCLE.md).
@@ -117,5 +118,6 @@ Refer to the [implementation guide](./docs/IMPLEMENTATION_GUIDE.md#readme) to le
 * [bpmn-js-element-templates](https://github.com/bpmn-io/bpmn-js-element-templates) - Provides the `ElementTemplates` core and ships with implementations for technical binding of [Camunda](https://camunda.com/) 7 and 8 properties.
 * [element-template-icon-renderer](https://github.com/bpmn-io/element-templates-icons-renderer) - Renders embedded element template icons on the modeling canvas.
 * [element-template-chooser](https://github.com/bpmn-io/element-template-chooser) - A simple element template chooser that plugs into the properties panel
+* [element-template-changelog](https://github.com/bpmn-io/element-template-changelog) - A simple review changes component that plugs into the properties panel
 * [element-template-json-schema](https://github.com/camunda/element-templates-json-schema) - The schema definition for template descriptors
 * [bpmn-js-create-append-anything](https://github.com/bpmn-io/bpmn-js-create-append-anything) - A deep integration into the core modeling experience, featuring create + append anything and replacing with template tasks

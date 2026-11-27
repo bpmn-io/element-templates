@@ -41,6 +41,16 @@ Get element templates applicable to `element` or matching template with `templat
 
 Get list of element templates available.
 
+### `ElementTemplates#getUpdate(element): { type, template } | null`
+
+Get the update available for an element: `{ type: 'migration', template }`, if a template declares a [migration path](./LIFE_CYCLE.md#update-paths) from the element's template, else `{ type: 'update', template }` to the latest compatible version of its template, if it differs. Returns `null` otherwise.
+
+### `ElementTemplates#getUpdateDetails(element, template): { message?, changes }`
+
+Get what changing an element to `template` means, as declared by its [update paths](./LIFE_CYCLE.md#update-paths). Works for any element and template, and is usually empty. `changes` are listed oldest first, each as `{ type: 'update' | 'migration', template, version?, text }`.
+
+`text` is untrusted Markdown: escape or sanitize it when you render it.
+
 ### `ElementTemplates#setEngines(engines: Record<string, string>): void`
 
 Sets the engines used to determine [element template compatibility](./LIFE_CYCLE.md#compatibility).
